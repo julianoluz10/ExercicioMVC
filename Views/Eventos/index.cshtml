@@ -1,0 +1,32 @@
+@model List<Eventos>
+
+
+@{
+    ViewData["Title"] = "Lista de Eventos Cadastrados";
+}
+<h1>Eventos</h1>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Descriçãor>
+        <th>Local</th>
+        <th>Quantidade de Vagas</th>
+        <th>Valor do Ingresso</th>
+        <th></th>
+    </tr>
+        @foreach(Eventos eventos in Model)
+        {
+            <tr>
+                <td>@eventos.Id</td>
+                <td>@eventos.Nome</td>
+                <td>@eventos.Descricao</td>
+                <td>@eventos.QuantidadeVagas</td>
+                <td>@eventos.ValorIngresso</td>
+                <td>
+                    <a asp-action="Detalhes" asp-route-id="@eventos.Id">Ver</a>
+                </td>
+            </tr>
+        }
+    </table>
