@@ -1,0 +1,14 @@
+@model Eventos
+@{
+    ViewData["Title"] = "detalhes";
+}
+<h1>Detalhes</h1>
+<p><Strong>Id: </Strong>@Model.Id</p>
+<p><Strong>Nome: </Strong>@Model.Nome</p>
+<p><Strong>Descrição: </Strong>@Model.Descricao</p>
+<p><Strong>Local: </Strong>@Model.Local</p>
+<p><Strong>Data do Evento: </Strong>@Model.DataEvento.ToString("dd/MM/yyyy")</p>
+<p><Strong>Quantidade de Vagas: </Strong>@Model.QuantidadeVagas</p>
+<p><Strong>Valor de Ingresso: </Strong>@Model.ValorIngresso</p>
+
+<a asp-action="Index">Voltar</a>
