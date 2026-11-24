@@ -23,8 +23,8 @@ namespace ExerciciosMVC.Models
         [StringLength(100, MinimumLength =3, ErrorMessage ="O local é obrigatório e deve conter entre 3 e 100 caracteres")]
         public string? Local { get; set; }  
 
-        // [Required(ErrorMessage ="Data do evento obrigatória e não pode ser anterior à data atual")]
-        // public DateTime DataEvento { get; set; }
+        [Required(ErrorMessage ="Data do evento obrigatória e não pode ser anterior à data atual")]
+        public DateTime DataEvento { get; set; }
 
         [Required(ErrorMessage ="Quantidade de vagas entre 1 e 1000")]
         [Range(1, 1000,ErrorMessage =" A quantidae de vagas esta entr 1 e 1000")]

@@ -12,6 +12,7 @@
         <th>Nome</th>
         <th>Descriçãor>
         <th>Local</th>
+        <th>Data do Eventos</th>
         <th>Quantidade de Vagas</th>
         <th>Valor do Ingresso</th>
         <th></th>
@@ -22,6 +23,8 @@
                 <td>@eventos.Id</td>
                 <td>@eventos.Nome</td>
                 <td>@eventos.Descricao</td>
+                <td>@eventos.Local</td>
+                <td>@eventos.DataEvento.ToString("dd/MM/yyyy")</td>
                 <td>@eventos.QuantidadeVagas</td>
                 <td>@eventos.ValorIngresso</td>
                 <td>

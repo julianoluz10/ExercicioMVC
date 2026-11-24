@@ -14,14 +14,14 @@ namespace ExerciciosMVC.Controllers
     {
         private static List<Eventos> _Eventos = new()
         {
-            new Eventos{Id = 1, Nome = "ConectaPro", Descricao = "Evento para prestadore de serviços em nuvem", Local = "São Caetano do Sul", QuantidadeVagas = 200, ValorIngresso= 300},
+            new Eventos{Id = 1, Nome = "ConectaPro", Descricao = "Evento para prestadore de serviços em nuvem", Local = "São Caetano do Sul",DataEvento = new DateTime(2026,10,12), QuantidadeVagas = 200, ValorIngresso= 300},
             new Eventos{Id = 2, Nome = "ConectaPremiun", Descricao = "Evento para prestadore de serviços em nuvem", Local = "São Caetano do Sul", QuantidadeVagas = 300, ValorIngresso= 200}
         };
 
 
         public IActionResult Index()
         {
-            return View();
+            return View(_Eventos);
         }
 
         //Get /Criar - Listar todos os eventos
